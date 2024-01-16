@@ -1,0 +1,209 @@
+{
+	"info": {
+		"_postman_id": "c8e124fd-103a-4a20-be25-1ce1871ee8b8",
+		"name": "Cubex Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1557861",
+		"_collection_link": "https://interstellar-crater-990966.postman.co/workspace/38903207-8ff4-4c0d-bfe1-e6519b719f28/collection/1557861-c8e124fd-103a-4a20-be25-1ce1871ee8b8?action=share&source=collection_link&creator=1557861"
+	},
+	"item": [
+		{
+			"name": "auth/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"john\",\n    \"password\":\"john123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth/login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/users/profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTcwNTQxNDQwMSwiZXhwIjoxNzA1NDE0NzAxfQ.asYPUV0LBytBBuir2_nqyuSEXkjaA6WhGvPaOIm8ZYI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userName\":\"john\",\n    \"password\":\"john123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users/profile",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/users/add",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTcwNTQxNDcxMCwiZXhwIjoxNzA1NDE1MDEwfQ._opwYJYqpiJJdjiBqSQ2Hx1gnlsXWxelWQATEuSKIy0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":3,\n    \"username\":\"Mike\",\n    \"password\":\"mike123\",\n    \"roles\":[\"USER\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users/add",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/users/edit",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTcwNTQxNDg1NywiZXhwIjoxNzA1NDE1MTU3fQ.LUQqpnnZuBeYJeUkYiDFcVtATBU60JC9EwQ4PQ1ZAik",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":3,\n    \"username\":\"Mike\",\n    \"password\":\"mike123\",\n    \"roles\":[\"USER\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users/edit",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/users/delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTcwNTQxNDkyOCwiZXhwIjoxNzA1NDE1MjI4fQ.G67ckGa_-gYVl7_tiYrDcs0QeBNo44aknm93sBhs4TE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":3,\n    \"username\":\"Mike\",\n    \"password\":\"mike123\",\n    \"roles\":[\"USER\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users/delete",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/users/details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsInJvbGVzIjpbIkFETUlOIl0sImlhdCI6MTcwNTQxNDkyOCwiZXhwIjoxNzA1NDE1MjI4fQ.G67ckGa_-gYVl7_tiYrDcs0QeBNo44aknm93sBhs4TE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\":3,\n    \"username\":\"Mike\",\n    \"password\":\"mike123\",\n    \"roles\":[\"USER\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/users/details",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"users",
+						"details"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
